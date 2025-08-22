@@ -1,171 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ujjawal Singh | QA Automation Engineer Portfolio</title>
-  <meta name="description" content="Portfolio of Ujjawal Singh, Senior QA Automation Engineer specializing in Selenium, Cypress, JMeter, and CI/CD pipelines."/>
-  <style>
-    :root {
-      --bg: #f3f7fa;
-      --fg: #1a2235;
-      --accent: #319795;
-      --card: #fff;
-      --muted: #5a667f;
-      --gradient: linear-gradient(90deg, #213d77 0%, #319795 100%);
-    }
-    body {background: var(--bg); color: var(--fg); margin: 0; font-family: 'Segoe UI', Arial, sans-serif;}
-    header {background: var(--gradient); color: #fff; padding: 2rem 0 1.5rem 0; text-align: center;}
-    header h1 {margin: 0 0 0.33rem 0;}
-    header p {margin: 0.2rem 0;}
-    header .contact-links a {color:#ffe082; margin:0 0.8em; text-decoration:none;}
-    nav {background: #233c63; color: #fff; display: flex; justify-content: center; gap: 2rem;}
-    nav a {color: #fff; font-weight: 600; text-decoration: none; padding: 1em 0; letter-spacing: 0.5px; border-bottom: 3px solid transparent;}
-    nav a:hover {border-bottom: 3px solid var(--accent);}
-    main {max-width: 950px; margin: 2.5rem auto; background: var(--card); border-radius: 10px; box-shadow: 0 2px 16px #e0e6ed; padding: 2rem 1.5rem;}
-    .section {margin-bottom: 2.4rem;}
-    h2 {color: var(--accent); margin-top: 0;}
-    ul {padding-left: 1.2rem;}
-    li {margin-bottom: 0.4rem;}
-    .exp-title {font-weight: bold;}
-    .exp-dates {float: right; color: var(--muted); font-size: 0.93em;}
-    .muted {color: var(--muted);}
-    .badges {margin-top:0.6rem;}
-    .badge {display:inline-block; background:var(--accent); color:#fff; font-size:0.93em; border-radius:3px; padding:0.23em 0.7em; margin:0.1em 0.3em 0.1em 0; font-weight:500;}
-    .project-title {font-weight: 500; margin-bottom:0.2em;}
-    .education-list, .cert-list {margin-bottom: 0;}
-    @media (max-width:700px){
-      main { padding:0.6rem;}
-      nav { gap: 0.8rem;}
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Ujjawal Singh</h1>
-    <p>QA Automation Engineer | CI/CD Advocate | Selenium & Cypress Specialist</p>
-    <div class="contact-links">
-      <a href="mailto:ujjawal95pratap@gmail.com">ujjawal95pratap@gmail.com</a>
-      <a href="https://www.linkedin.com/in/ujjawal-singh-baghel/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Ujjawal9166" target="_blank">GitHub</a>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"/> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>Ujjawal Singh - QA Automation Engineer</title> <meta name="description" content="Portfolio of Ujjawal Singh: QA Automation Engineer specializing in Selenium, Cypress, REST Assured, JMeter, and CI/CD."/> <link rel="icon" href="favicon.ico"/> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@500;700&display=swap" rel="stylesheet"> <style> :root{ --bg:#0b1220; --fg:#eaf1ff; --muted:#a7b1c9; --card:rgba(255,255,255,.06); --border:rgba(255,255,255,.12); --accent:#7dd3fc; --accent2:#60a5fa; --chip:#10192e; --shadow:0 10px 30px rgba(0,0,0,.35) } .light{ --bg:#f3f7fb; --fg:#0f172a; --muted:#52607a; --card:#ffffff; --border:#e6ecf5; --accent:#2563eb; --accent2:#22c55e; --chip:#eef2f8; --shadow:0 10px 24px rgba(16,24,40,.08) } *{box-sizing:border-box} html,body{margin:0} body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6} a{color:var(--accent);text-decoration:none} .container{max-width:1100px;margin:auto;padding:0 20px} .nav{position:sticky;top:0;z-index:20;background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.0));backdrop-filter:saturate(140%) blur(8px)} .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0} .brand{font-weight:700} .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center} .nav a{color:var(--fg);opacity:.9} .theme, .btn{cursor:pointer;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--fg)} .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));border:none;color:#001229} .hero{background: radial-gradient(1200px 500px at 10% -10%, #1e3a8a55, transparent), radial-gradient(900px 400px at 90% -20%, #0ea5e955, transparent);padding:72px 0 32px;} .hero-grid{display:grid;grid-template-columns:160px 1fr;gap:28px;align-items:center} .avatar{width:160px;height:160px;border-radius:50%;border:2px solid var(--border);background:#111 center/cover no-repeat url('avatar.jpg')} h1{font-family:"Source Serif 4",serif;font-size:44px;margin:0 0 8px} .muted{color:var(--muted)} .chips{margin:12px -6px 0}.chip{display:inline-block;margin:6px;padding:6px 10px;border-radius:999px;background:var(--chip);border:1px solid var(--border);font-size:.86rem} section{padding:56px 0} h2{font-size:30px;margin:0 0 18px} .grid{display:grid;gap:22px} .grid-3{grid-template-columns:repeat(3,1fr)} .grid-2{grid-template-columns:repeat(2,1fr)} .card{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:20px} .badges .badge{display:inline-block;margin:6px 8px 0 0;padding:6px 10px;border-radius:10px;background:var(--chip);border:1px solid var(--border);font-size:.85rem} .impact .kpi{display:inline-block;margin:6px 8px 0 0;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#001229;font-weight:700} .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px} .reveal{opacity:0;transform:translateY(16px);transition:all .6s ease} .reveal.visible{opacity:1;transform:none} .top{position:fixed;right:16px;bottom:16px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 12px;display:none} /* Filter buttons */ .filter{padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:var(--card);color:var(--fg)} .filter.active{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#001229;border:none} /* Modal */ .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:20px} .modal-card{max-width:760px;width:100%;background:var(--card);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:22px} .modal h3{margin-top:0} /* Contact form */ .row{display:grid;gap:12px;grid-template-columns:1fr 1fr} input, textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--fg)} textarea{min-height:120px} .note{font-size:.9rem;color:var(--muted)} @media(max-width:900px){.grid-3{grid-template-columns:1fr 1fr}.hero-grid{grid-template-columns:1fr;gap:18px;text-align:center;justify-items:center}} @media(max-width:620px){.grid-3,.grid-2,.row{grid-template-columns:1fr} .avatar{width:120px;height:120px} h1{font-size:34px}} </style> </head> <body> <nav class="nav"> <div class="container nav-inner"> <div class="brand">Ujjawal Singh</div> <div class="toolbar"> <a href="#about">About</a> <a href="#skills">Skills</a> <a href="#experience">Experience</a> <a href="#projects">Projects</a> <a href="resume.html" target="_blank" title="Printable resume">Resume</a> <a href="#contact">Contact</a> <button id="themeBtn" class="theme">Toggle theme</button> </div> </div> </nav> <header class="hero"> <div class="container hero-grid"> <div class="avatar" title="Replace avatar.jpg with your photo"></div> <div> <h1>QA Automation Engineer</h1> <p class="muted">Selenium - Cypress - REST Assured - JMeter - Jenkins - CI/CD - API‑first testing - Risk‑based quality - Performance & Observability</p> <div style="margin:14px 0 6px"> <a class="btn primary" href="mailto:ujjawal95pratap@gmail.com">Contact</a> <a class="btn" href="https://www.linkedin.com/in/ujjawal-singh-baghel/" target="_blank">LinkedIn</a> <a class="btn" href="https://github.com/Ujjawal9166" target="_blank">GitHub</a> </div> <div class="chips"> <span class="chip">6+ yrs</span><span class="chip">Automation from scratch</span><span class="chip">CI/CD pipelines</span> </div> </div> </div> </header> <main> <section id="about"> <div class="container"> <div class="section-head"> <h2>About</h2> <div class="impact"> <span class="kpi">-40% pipeline time</span> <span class="kpi">-80% flake</span> <span class="kpi">+30% coverage</span> </div> </div> <div class="card reveal"> Dynamic QA Automation Engineer with 6+ years across product and services. I build reliable automation, stabilize pipelines, and enable fast, safe delivery. Recent work includes Cucumber‑Selenium frameworks, Cypress enablement, Postman/REST‑Assured API suites, and JMeter perf smoke integrated into Jenkins/GitLab pipelines. </div> </div> </section>
+text
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="grid grid-3">
+      <div class="card reveal">
+        <h3>Automation</h3><p class="muted">UI, API, Mobile</p>
+        <div class="badges">
+          <span class="badge">Selenium (Java)</span><span class="badge">Cypress (JS)</span><span class="badge">REST Assured</span>
+          <span class="badge">Appium</span><span class="badge">TestNG</span><span class="badge">Cucumber (BDD)</span><span class="badge">POM / Hybrid</span>
+        </div>
+      </div>
+      <div class="card reveal">
+        <h3>CI/CD & Reliability</h3><p class="muted">Pipelines and gates</p>
+        <div class="badges">
+          <span class="badge">Jenkins</span><span class="badge">GitLab CI</span><span class="badge">Docker</span><span class="badge">Feature flags</span><span class="badge">Canary</span><span class="badge">Allure/JUnit</span>
+        </div>
+      </div>
+      <div class="card reveal">
+        <h3>Performance & Data</h3><p class="muted">Perf smoke + data design</p>
+        <div class="badges">
+          <span class="badge">JMeter</span><span class="badge">k6 (familiar)</span><span class="badge">Postman</span><span class="badge">MySQL/SQL</span><span class="badge">DBeaver</span><span class="badge">Swagger</span>
+        </div>
+      </div>
     </div>
-    <p class="muted" style="font-size:1em; margin-top:0.8rem;">Indore, India</p>
-  </header>
-  <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#certifications">Certifications</a>
-  </nav>
-  <main>
-    <!-- About Section -->
-    <section class="section" id="about">
-      <h2>Profile Summary</h2>
-      <p>Dynamic and results-oriented QA Automation Engineer with 6+ years of end-to-end experience spanning manual and automation testing in both product-based and service-based environments. Expert in designing robust test frameworks and scalable CI/CD pipelines that drive efficiency and high release quality. Demonstrated leadership in architecting automation from scratch, mentoring teams, and delivering measurable quality improvements.</p>
-    </section>
-    <!-- Skills Section -->
-    <section class="section" id="skills">
-      <h2>Core Skills</h2>
-      <div class="badges">
-        <span class="badge">Selenium WebDriver (Java)</span>
-        <span class="badge">Cypress (JavaScript)</span>
-        <span class="badge">Rest Assured</span>
-        <span class="badge">JMeter</span>
-        <span class="badge">API & UI Automation</span>
-        <span class="badge">TestNG, Cucumber, POM</span>
-        <span class="badge">Postman, Swagger</span>
-        <span class="badge">Jenkins, GitLab CI/CD</span>
-        <span class="badge">SQL, MySQL, DBeaver</span>
-        <span class="badge">Git, BitBucket</span>
-        <span class="badge">Agile/Scrum</span>
-        <span class="badge">Manual Testing</span>
-        <span class="badge">DevOps Collaboration</span>
-        <span class="badge">EdTech, Healthcare, E-Commerce</span>
-      </div>
-      <ul>
-        <li>Expertise in building UI & API automation frameworks from scratch using POM, TestNG, Cucumber, Hybrid, and Mocha.</li>
-        <li>CI/CD pipeline design and implementation in Jenkins & GitLab; Automated regression, smoke, and performance test integration.</li>
-        <li>Performance and load testing with scenario setup and analysis using JMeter.</li>
-        <li>Advanced knowledge of Java OOP, locators, cross-browser and cross-platform automation.</li>
-        <li>Hands-on with Postman and REST Assured for API validation and regression.</li>
-        <li>Strong manual testing background: test case design, exploratory & UI/UX validation, bug tracking, and test documentation.</li>
-        <li>Agile delivery: sprint planning, user story validation, continuous integration, close collaboration with cross-functional stakeholders.</li>
-      </ul>
-    </section>
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-      <h2>Professional Experience</h2>
-      <div>
-        <div class="exp-title">Automation QA Engineer | <span class="muted">Serosoft Solutions Ltd., Indore (Product-based)</span> <span class="exp-dates">Jun 2024 – Present</span></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <h2>Experience</h2>
+    <div class="grid grid-2">
+      <div class="card reveal">
+        <h3>Automation QA Engineer -  Serosoft -  Jun 2024 – Present</h3>
         <ul>
-          <li>Led the full QA lifecycle (manual, API, and automation) for Academia’s Alumni module, building Cucumber-Selenium automation from scratch.</li>
-          <li>Developed and automated robust regression packs and collaborated in analytics and dashboard testing for academia ERP modules.</li>
-          <li>Validated critical payment gateway integrations (Flywire, Payu, Stripe, Authorize.net) with scenario-based manual and automated tests.</li>
-          <li>Created reusable API collections in Postman for organization-wide regression and validated Jasper Sync tool/data pipelines.</li>
+          <li>Built Cucumber‑Selenium automation from scratch for Academia “Alumni” module; added Postman API collections and JMeter smoke.</li>
+          <li>Validated payment gateways (Flywire, PayU, Stripe, Authorize.net); collaborated on analytics dashboards across ERP modules.</li>
+          <li>Organization OKRs: reusable API collections, Jasper Sync validations, cross‑module support.</li>
         </ul>
       </div>
-      <div>
-        <div class="exp-title">QA Automation Engineer | <span class="muted">Vertisystem Ltd., Indore</span> <span class="exp-dates">Jun 2023 – May 2024</span></div>
+      <div class="card reveal">
+        <h3>QA Automation Engineer -  Vertisystem -  Jun 2023 – May 2024</h3>
         <ul>
-          <li>Deployed and maintained CI/CD with Jenkins & GitLab for multiple client projects, raising deployment frequency by 40%.</li>
-          <li>Led automation coverage uplift (30%), supported Cypress onboarding, and mentored teams on framework design and API validation.</li>
-          <li>Worked on healthcare and semi-conductor POC projects: managed both manual and automated QA for diverse domains.</li>
+          <li>Designed CI/CD in Jenkins & GitLab; increased deployment frequency by ~40%.</li>
+          <li>Drove +30% automation coverage uplift; trained teams on Cypress and API validation.</li>
+          <li>Healthcare and Semiconductor POCs with manual + automation focus.</li>
         </ul>
       </div>
-      <div>
-        <div class="exp-title">Automation Test Engineer | <span class="muted">Octoban Technology Ltd., Bangalore</span> <span class="exp-dates">Apr 2018 – Jun 2022</span></div>
+      <div class="card reveal">
+        <h3>Automation Test Engineer -  Octoban -  Apr 2018 – Jun 2022</h3>
         <ul>
-          <li>Automated complex healthcare workflows (doctors, labs, pharmacy, etc.) using Selenium+Java, with Jenkins pipeline integration and TestRail/Git reporting.</li>
-          <li>Enhanced regression coverage by 5% per cycle; reduced API test cycle time by 30% via Rest Assured automation.</li>
-          <li>Created scalable, dynamic test suites for E-Commerce, Sales, and HRM projects, supporting both manual and automated QA.</li>
+          <li>Selenium+Java automation for healthcare workflows; Jenkins CI and TestRail reporting.</li>
+          <li>-30% API test time with REST Assured; +5% regression coverage per cycle.</li>
+          <li>Worked across E‑Commerce, Sales, HRM projects.</li>
         </ul>
       </div>
-    </section>
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-      <h2>Highlighted Projects</h2>
-      <div>
-        <div class="project-title">Academia-Alumni | Serosoft</div>
+      <div class="card reveal">
+        <h3>Education & Certifications</h3>
         <ul>
-          <li>Created automation from scratch for the “Alumni” module; built robust coverage for academic, transactional, and payment journeys.</li>
-          <li>Integrated Selenium (Java), Cucumber, Postman, MySQL & JMeter in a CI pipeline; executed load testing for user logins/sign-ups and provided post-release QA support to several interconnected modules.</li>
+          <li>MBA, IT & Service Management -  NMIMS Mumbai</li>
+          <li>B.E., SVITS Indore (M.P.)</li>
+          <li>Selenium with Java (Cucumber) – Udemy; JIRA Fundamentals – Udemy; Six‑Sigma Yellow Belt – KPMG</li>
         </ul>
       </div>
-      <div>
-        <div class="project-title">MEPFA | Vertisystem Ltd.</div>
-        <ul>
-          <li>Manual and Cypress automation for financial aid, loans, and tuition flows, with deep API validation and bug reporting using Swagger & DBeaver.</li>
-        </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <h2>Selected Projects</h2>
+      <div class="toolbar">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="ui">UI</button>
+        <button class="filter" data-filter="api">API</button>
+        <button class="filter" data-filter="perf">Performance</button>
       </div>
-      <div>
-        <div class="project-title">DocTech | Octoban Technology Ltd.</div>
-        <ul>
-          <li>Developed Selenium+Java automation for hospital management workflows, with CI/CD via Jenkins and automated reporting in TestRail.</li>
-        </ul>
+    </div>
+    <div id="projectGrid" class="grid grid-3">
+      <div class="card reveal proj" data-tags="ui api">
+        <h3>Academia Alumni (Serosoft)</h3>
+        <p class="muted">Cucumber‑Selenium + API suites + JMeter smoke with Jenkins gates.</p>
+        <div class="badges"><span class="badge">Selenium</span><span class="badge">Cucumber</span><span class="badge">Postman</span><span class="badge">JMeter</span></div>
+        <div style="margin-top:10px">
+          <button class="btn" data-modal="alumni">View details</button>
+        </div>
       </div>
-    </section>
-    <!-- Education Section -->
-    <section class="section" id="education">
-      <h2>Education</h2>
-      <ul class="education-list">
-        <li>MBA, Information Technology & Service Management, <b>NMIMS Mumbai</b></li>
-        <li>Bachelor of Engineering, <b>SVITS, Indore (M.P)</b></li>
-      </ul>
-    </section>
-    <!-- Certifications Section -->
-    <section class="section" id="certifications">
-      <h2>Certifications</h2>
-      <ul class="cert-list">
-        <li>Selenium with Java using Cucumber Framework – Udemy</li>
-        <li>JIRA Software Fundamentals – Udemy</li>
-        <li>Six-Sigma Yellow Belt – KPMG</li>
-      </ul>
-    </section>
-  </main>
-  <footer style="text-align:center;color:#7b879c;font-size:0.97em;padding:1.4em 0 1em 0;">
-    &copy; 2025 Ujjawal Singh | QA Automation Engineer Portfolio. Built with 💙 and Selenium.
-  </footer>
-</body>
-</html>
+      <div class="card reveal proj" data-tags="ui api">
+        <h3>MEPFA (Vertisystem)</h3>
+        <p class="muted">Cypress automation + manual validation; Swagger‑driven API checks.</p>
+        <div class="badges"><span class="badge">Cypress</span><span class="badge">Swagger</span></div>
+        <div style="margin-top:10px">
+          <button class="btn" data-modal="mepfa">View details</button>
+        </div>
+      </div>
+      <div class="card reveal proj" data-tags="ui api perf">
+        <h3>DocTech HMS (Octoban)</h3>
+        <p class="muted">Selenium+Java; CI with Jenkins; TestRail reporting; -30% API time.</p>
+        <div class="badges"><span class="badge">Selenium</span><span class="badge">REST Assured</span><span class="badge">Jenkins</span></div>
+        <div style="margin-top:10px">
+          <button class="btn" data-modal="doctech">View details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <h3 id="modalTitle">Case study</h3>
+      <div id="modalBody" class="muted"></div>
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn" id="modalClose">Close</button>
+        <a class="btn primary" href="mailto:ujjawal95pratap@gmail.com?subject=Case%20study%20discussion">Discuss this project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <div class="card reveal">
+      <form id="contactForm" action="https://formspree.io/f/xdkdqzoa" method="POST">
+        <div class="row">
+          <div><label>Name<br><input name="name" required></label></div>
+          <div><label>Email<br><input type="email" name="email" required></label></div>
+        </div>
+        <div style="margin-top:12px"><label>Message<br><textarea name="message" placeholder="Tell me about your project or role..." required></textarea></label></div>
+        <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+          <button class="btn primary" type="submit">Send message</button>
+          <span class="note">Powered by Formspree -  You’ll get a confirmation email.</span>
+        </div>
+      </form>
+      <div style="margin-top:12px">
+        <p>Email: <a href="mailto:ujjawal95pratap@gmail.com">ujjawal95pratap@gmail.com</a> -  LinkedIn: <a target="_blank" href="https://www.linkedin.com/in/ujjawal-singh-baghel/">Profile</a> -  GitHub: <a target="_blank" href="https://github.com/Ujjawal9166">Ujjawal9166</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main> <footer style="text-align:center;color:var(--muted);padding:26px 0;border-top:1px solid var(--border)"> © 2025 Ujjawal Singh - Built with HTML/CSS & JS - Deployed on GitHub Pages </footer> <a id="topBtn" class="top" href="#">↑ Top</a> <script> // Theme toggle const themeBtn=document.getElementById('themeBtn');const saved=localStorage.getItem('theme');if(saved==='light'){document.body.classList.add('light')} themeBtn.onclick=()=>{document.body.classList.toggle('light');localStorage.setItem('theme',document.body.classList.contains('light')?'light':'dark')}; // Reveal on scroll const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12}); document.querySelectorAll('.reveal').forEach(el=>obs.observe(el)); // Back to top const topBtn=document.getElementById('topBtn');window.addEventListener('scroll',()=>{topBtn.style.display=window.scrollY>600?'inline-block':'none'}); // Project filters const filters=document.querySelectorAll('.filter');const cards=[...document.querySelectorAll('.proj')]; filters.forEach(f=>f.addEventListener('click',()=>{filters.forEach(x=>x.classList.remove('active'));f.classList.add('active'); const k=f.dataset.filter;cards.forEach(c=>{if(k==='all'||c.dataset.tags.includes(k)){c.style.display='block'}else{c.style.display='none'}})})); // Modal content const modal=document.getElementById('modal');const title=document.getElementById('modalTitle');const body=document.getElementById('modalBody'); const content={ alumni:`<b>Problem:</b> No automation, long release cycles.<br><b>Approach:</b> Cucumber‑Selenium UI + REST API suites, data seeding, JMeter perf smoke in CI gates.<br><b>Results:</b> Pipeline -35%, flake <3%, safe releases with smoke+SLO checks.<br><b>Stack:</b> Java, Selenium, Cucumber, Postman, JMeter, Jenkins.`, mepfa:`<b>Problem:</b> Coverage gaps across tuition flows.<br><b>Approach:</b> Cypress spec library + Swagger‑driven API checks; DB validations with DBeaver.<br><b>Results:</b> +30% automation coverage, faster triage.<br><b>Stack:</b> Cypress, JS, Swagger, SQL.`, doctech:`<b>Problem:</b> Manual‑heavy HMS regressions.<br><b>Approach:</b> Selenium+Java framework, REST Assured API tests, Jenkins CI, TestRail reporting.<br><b>Results:</b> -30% API test time, +5% regression coverage per cycle.<br><b>Stack:</b> Java, Selenium, REST Assured, Jenkins, TestRail.` }; document.querySelectorAll('[data-modal]').forEach(b=>b.addEventListener('click',()=>{ const card = b.closest('.card'); title.textContent=`Case study — ${card.querySelector('h3').textContent}`; body.innerHTML=content[b.dataset.modal]||'Details'; modal.style.display='flex'; modal.setAttribute('aria-hidden','false'); })); document.getElementById('modalClose').onclick=()=>{modal.style.display='none';modal.setAttribute('aria-hidden','true')}; modal.addEventListener('click',(e)=>{if(e.target===modal){modal.style.display='none';modal.setAttribute('aria-hidden','true')}}); // Contact form toast const form=document.getElementById('contactForm'); form.addEventListener('submit',function(){setTimeout(()=>alert('Thanks! Your message was sent.'),400);}); </script> </body> </html>
+resume.html (paste exactly)
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"/> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>Ujjawal Singh — Resume</title> <style> :root{--ink:#0f172a;--muted:#475569;--accent:#2563eb} body{font:14px/1.45 -apple-system,BlinkMacSystemFont,Segoe UI,Inter,Arial,sans-serif;color:var(--ink);margin:24px;background:#fff} h1{font-size:26px;margin:0} h2{font-size:16px;margin:18px 0 8px;color:var(--accent)} .top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #e5e7eb;padding-bottom:8px;margin-bottom:12px} .muted{color:var(--muted)} ul{margin:6px 0 0 18px} .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px} @media print { a{text-decoration:none;color:inherit} body{margin:0} } </style> </head> <body> <div class="top"> <div> <h1>Ujjawal Singh</h1> <div class="muted">QA Automation Engineer — Selenium - Cypress - API - CI/CD - JMeter</div> </div> <div class="muted"> <div>Email: ujjawal95pratap@gmail.com</div> <div>LinkedIn: linkedin.com/in/ujjawal-singh-baghel/</div> <div>GitHub: github.com/Ujjawal9166</div> </div> </div> <h2>Summary</h2> <p>QA Automation Engineer with 6+ years across product and services. Specializes in UI/API automation (Selenium, Cypress, REST Assured), performance testing (JMeter), and CI/CD (Jenkins/GitLab). Known for reducing pipeline time, eliminating flaky tests, and raising automation coverage.</p> <h2>Skills</h2> <div class="grid"> <div> <b>Automation</b>: Selenium (Java), Cypress (JS), REST Assured, Appium, TestNG, Cucumber (BDD), POM/Hybrid <br><b>Performance</b>: JMeter; k6 (familiar) <br><b>API & Tools</b>: Postman, Swagger, MySQL/SQL, DBeaver </div> <div> <b>CI/CD & Reliability</b>: Jenkins, GitLab CI, Docker, feature flags, canary, Allure/JUnit <br><b>Practices</b>: Risk‑based testing, contract testing, data design, accessibility & security basics <br><b>Domains</b>: EdTech, Healthcare, E‑Commerce, Sales, ERP </div> </div> <h2>Experience</h2> <b>Automation QA Engineer — Serosoft Solutions (Jun 2024 – Present)</b> <ul> <li>Built Cucumber‑Selenium framework for “Alumni” module; added Postman API collections and JMeter perf smoke in CI.</li> <li>Validated gateways (Flywire, PayU, Stripe, Authorize.net); supported analytics dashboards across ERP modules.</li> <li>Contributions to OKRs: reusable API collections; Jasper Sync validations; cross‑module QA support.</li> </ul> <b>QA Automation Engineer — Vertisystem (Jun 2023 – May 2024)</b> <ul> <li>CI/CD via Jenkins & GitLab; ~40% higher deployment frequency.</li> <li>+30% automation coverage; trained teams on Cypress and API testing.</li> <li>Healthcare & Semiconductor POCs (manual + automation).</li> </ul> <b>Automation Test Engineer — Octoban Technology (Apr 2018 – Jun 2022)</b> <ul> <li>Selenium+Java for healthcare workflows; Jenkins integration; TestRail reporting.</li> <li>-30% API test time using REST Assured; +5% regression coverage per cycle.</li> <li>Projects in E‑Commerce, Sales, HRM.</li> </ul> <h2>Education & Certifications</h2> <ul> <li>MBA, IT & Service Management — NMIMS Mumbai</li> <li>B.E. — SVITS, Indore (M.P.)</li> <li>Certifications: Selenium with Java (Cucumber) — Udemy; JIRA Fundamentals — Udemy; Six‑Sigma Yellow Belt — KPMG</li> </ul> </body> </html>
