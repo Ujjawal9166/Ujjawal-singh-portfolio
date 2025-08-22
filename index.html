@@ -6,11 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ujjawal Singh - QA Automation Engineer</title>
   <meta name="description"
-    content="Portfolio of Ujjawal Singh: QA Automation Engineer specializing in Selenium, Cypress, REST Assured, JMeter, and CI/CD." />
+    content="Portfolio of Ujjawal Singh: QA Automation Engineer specializing in Selenium, Cypress, REST Assured, JMeter, CI/CD." />
   <link rel="icon" href="favicon.ico" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@600&display=swap"
     rel="stylesheet">
   <style>
     :root {
@@ -67,7 +66,7 @@
     .nav {
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 10;
       background: linear-gradient(180deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .0));
       backdrop-filter: saturate(140%) blur(8px)
     }
@@ -85,24 +84,18 @@
 
     .toolbar {
       display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center
+      gap: 14px;
+      flex-wrap: wrap
     }
 
-    .nav a {
-      color: var(--fg);
-      opacity: .9
-    }
-
-    .theme,
-    .btn {
-      cursor: pointer;
+    .btn,
+    .theme {
       padding: 10px 14px;
-      border-radius: 10px;
       border: 1px solid var(--border);
       background: var(--card);
-      color: var(--fg)
+      border-radius: 10px;
+      color: var(--fg);
+      cursor: pointer
     }
 
     .btn.primary {
@@ -128,12 +121,12 @@
       height: 160px;
       border-radius: 50%;
       border: 2px solid var(--border);
-      background: linear-gradient(135deg, #233c63, #2563eb);
+      background: linear-gradient(135deg, #233c63, #2563eb)
     }
 
     h1 {
       font-family: "Source Serif 4", serif;
-      font-size: 44px;
+      font-size: 42px;
       margin: 0 0 8px
     }
 
@@ -160,7 +153,7 @@
     }
 
     h2 {
-      font-size: 30px;
+      font-size: 28px;
       margin: 0 0 18px
     }
 
@@ -205,99 +198,11 @@
       font-weight: 700
     }
 
-    .section-head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 20px
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: all .6s ease
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: none
-    }
-
-    .top {
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 10px 12px;
-      display: none
-    }
-
-    /* Filter buttons */
-    .filter {
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--fg)
-    }
-
-    .filter.active {
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      color: #001229;
-      border: none
-    }
-
-    /* Modal */
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, .55);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px
-    }
-
-    .modal-card {
-      max-width: 760px;
-      width: 100%;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-      padding: 22px
-    }
-
-    .modal h3 {
-      margin-top: 0
-    }
-
-    /* Contact form */
-    .row {
-      display: grid;
-      gap: 12px;
-      grid-template-columns: 1fr 1fr
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--fg)
-    }
-
-    textarea {
-      min-height: 120px
-    }
-
-    .note {
-      font-size: .9rem;
-      color: var(--muted)
+    footer {
+      padding: 26px 0;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--border)
     }
 
     @media(max-width:900px) {
@@ -316,8 +221,7 @@
     @media(max-width:620px) {
 
       .grid-3,
-      .grid-2,
-      .row {
+      .grid-2 {
         grid-template-columns: 1fr
       }
 
@@ -337,15 +241,15 @@
   <nav class="nav">
     <div class="container nav-inner">
       <div class="brand">Ujjawal Singh</div>
-      <div class="toolbar"> <a href="#about">About</a> <a href="#skills">Skills</a> <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a> <a href="resume.html" target="_blank" title="Printable resume">Resume</a> <a
-          href="#contact">Contact</a> <button id="themeBtn" class="theme">Toggle theme</button>
+      <div class="toolbar"> <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a
+          href="#projects">Projects</a> <a href="resume.html" target="_blank">Resume</a><a href="#contact">Contact</a>
+        <button class="theme" onclick="document.body.classList.toggle('light')">Toggle theme</button>
       </div>
     </div>
   </nav>
   <header class="hero">
     <div class="container hero-grid">
-      <div class="avatar" title="Add your photo in avatar.jpg (square)."></div>
+      <div class="avatar" title="Upload avatar.jpg later to replace gradient"></div>
       <div>
         <h1>QA Automation Engineer</h1>
         <p class="muted">Selenium - Cypress - REST Assured - JMeter - Jenkins - CI/CD - API‑first testing - Risk‑based
@@ -354,57 +258,49 @@
             href="mailto:ujjawal95pratap@gmail.com">Contact</a> <a class="btn"
             href="https://www.linkedin.com/in/ujjawal-singh-baghel/" target="_blank" rel="noopener">LinkedIn</a> <a
             class="btn" href="https://github.com/Ujjawal9166" target="_blank" rel="noopener">GitHub</a> </div>
-        <div class="chips"> <span class="chip">6+ yrs</span> <span class="chip">Automation from scratch</span> <span
-            class="chip">CI/CD pipelines</span> </div>
+        <div class="chips"><span class="chip">6+ yrs</span><span class="chip">Automation from scratch</span><span
+            class="chip">CI/CD pipelines</span></div>
       </div>
     </div>
   </header>
   <main>
     <section id="about">
       <div class="container">
-        <div class="section-head">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:20px">
           <h2>About</h2>
-          <div class="impact"> <span class="kpi">-40% pipeline time</span> <span class="kpi">-80% flake</span> <span
-              class="kpi">+30% coverage</span> </div>
+          <div class="impact"><span class="kpi">-40% pipeline time</span><span class="kpi">-80% flake</span><span
+              class="kpi">+30% coverage</span></div>
         </div>
-        <div class="card reveal"> Dynamic QA Automation Engineer with 6+ years across product and services. I build
-          reliable automation, stabilize pipelines, and enable fast, safe delivery. Recent work includes
-          Cucumber‑Selenium frameworks, Cypress enablement, Postman/REST‑Assured API suites, and JMeter perf smoke
-          integrated into Jenkins/GitLab pipelines. </div>
+        <div class="card"> Dynamic QA Automation Engineer with 6+ years across product and services. I build reliable
+          automation, stabilize pipelines, and enable fast, safe delivery. Recent work includes Cucumber‑Selenium
+          frameworks, Cypress enablement, Postman/REST‑Assured API suites, and JMeter perf smoke integrated into
+          Jenkins/GitLab pipelines. </div>
       </div>
     </section>
-    text
     <section id="skills">
       <div class="container">
         <h2>Skills</h2>
         <div class="grid grid-3">
-          <div class="card reveal">
+          <div class="card">
             <h3>Automation</h3>
             <p class="muted">UI, API, Mobile</p>
-            <div class="badges">
-              <span class="badge">Selenium (Java)</span><span class="badge">Cypress (JS)</span><span class="badge">REST
-                Assured</span>
-              <span class="badge">Appium</span><span class="badge">TestNG</span><span class="badge">Cucumber
-                (BDD)</span><span class="badge">POM / Hybrid</span>
-            </div>
+            <div class="badges"><span class="badge">Selenium (Java)</span><span class="badge">Cypress (JS)</span><span
+                class="badge">REST Assured</span><span class="badge">Appium</span><span class="badge">TestNG</span><span
+                class="badge">Cucumber (BDD)</span><span class="badge">POM/Hybrid</span></div>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h3>CI/CD & Reliability</h3>
             <p class="muted">Pipelines and gates</p>
-            <div class="badges">
-              <span class="badge">Jenkins</span><span class="badge">GitLab CI</span><span
+            <div class="badges"><span class="badge">Jenkins</span><span class="badge">GitLab CI</span><span
                 class="badge">Docker</span><span class="badge">Feature flags</span><span
-                class="badge">Canary</span><span class="badge">Allure/JUnit</span>
-            </div>
+                class="badge">Canary</span><span class="badge">Allure/JUnit</span></div>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h3>Performance & Data</h3>
             <p class="muted">Perf smoke + data design</p>
-            <div class="badges">
-              <span class="badge">JMeter</span><span class="badge">k6 (familiar)</span><span
+            <div class="badges"><span class="badge">JMeter</span><span class="badge">k6 (familiar)</span><span
                 class="badge">Postman</span><span class="badge">MySQL/SQL</span><span class="badge">DBeaver</span><span
-                class="badge">Swagger</span>
-            </div>
+                class="badge">Swagger</span></div>
           </div>
         </div>
       </div>
@@ -414,38 +310,38 @@
       <div class="container">
         <h2>Experience</h2>
         <div class="grid grid-2">
-          <div class="card reveal">
+          <div class="card">
             <h3>Automation QA Engineer - Serosoft - Jun 2024 – Present</h3>
             <ul>
-              <li>Built Cucumber‑Selenium automation from scratch for Academia “Alumni” module; added Postman API
-                collections and JMeter smoke.</li>
+              <li>Built Cucumber‑Selenium automation from scratch for Academia “Alumni”; plus Postman API collections
+                and JMeter smoke.</li>
               <li>Validated payment gateways (Flywire, PayU, Stripe, Authorize.net); collaborated on analytics
-                dashboards across ERP modules.</li>
-              <li>Organization OKRs: reusable API collections, Jasper Sync validations, cross‑module support.</li>
+                dashboards.</li>
+              <li>OKRs: reusable API collections, Jasper Sync validations, cross‑module support.</li>
             </ul>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h3>QA Automation Engineer - Vertisystem - Jun 2023 – May 2024</h3>
             <ul>
-              <li>Designed CI/CD in Jenkins & GitLab; increased deployment frequency by ~40%.</li>
-              <li>Drove +30% automation coverage uplift; trained teams on Cypress and API validation.</li>
-              <li>Healthcare and Semiconductor POCs with manual + automation focus.</li>
+              <li>Designed CI/CD in Jenkins & GitLab; ~40% higher deployment frequency.</li>
+              <li>+30% automation coverage; trained teams on Cypress and API validation.</li>
+              <li>Healthcare and Semiconductor POCs (manual + automation).</li>
             </ul>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h3>Automation Test Engineer - Octoban - Apr 2018 – Jun 2022</h3>
             <ul>
-              <li>Selenium+Java automation for healthcare workflows; Jenkins CI and TestRail reporting.</li>
+              <li>Selenium+Java for healthcare workflows; Jenkins CI and TestRail reporting.</li>
               <li>-30% API test time with REST Assured; +5% regression coverage per cycle.</li>
-              <li>Worked across E‑Commerce, Sales, HRM projects.</li>
+              <li>Projects in E‑Commerce, Sales, HRM.</li>
             </ul>
           </div>
-          <div class="card reveal">
+          <div class="card">
             <h3>Education & Certifications</h3>
             <ul>
               <li>MBA, IT & Service Management - NMIMS Mumbai</li>
               <li>B.E., SVITS Indore (M.P.)</li>
-              <li>Selenium with Java (Cucumber) – Udemy; JIRA Fundamentals – Udemy; Six‑Sigma Yellow Belt – KPMG</li>
+              <li>Selenium with Java (Cucumber) — Udemy; JIRA Fundamentals — Udemy; Six‑Sigma Yellow Belt — KPMG</li>
             </ul>
           </div>
         </div>
@@ -454,87 +350,48 @@
 
     <section id="projects">
       <div class="container">
-        <div class="section-head">
-          <h2>Selected Projects</h2>
-          <div class="toolbar">
-            <button class="filter active" data-filter="all">All</button>
-            <button class="filter" data-filter="ui">UI</button>
-            <button class="filter" data-filter="api">API</button>
-            <button class="filter" data-filter="perf">Performance</button>
-          </div>
-        </div>
-        <div id="projectGrid" class="grid grid-3">
-          <div class="card reveal proj" data-tags="ui api">
+        <h2>Selected Projects</h2>
+        <div class="grid grid-3">
+          <div class="card">
             <h3>Academia Alumni (Serosoft)</h3>
             <p class="muted">Cucumber‑Selenium + API suites + JMeter smoke with Jenkins gates.</p>
             <div class="badges"><span class="badge">Selenium</span><span class="badge">Cucumber</span><span
                 class="badge">Postman</span><span class="badge">JMeter</span></div>
-            <div style="margin-top:10px">
-              <button class="btn" data-modal="alumni">View details</button>
-            </div>
           </div>
-          <div class="card reveal proj" data-tags="ui api">
+          <div class="card">
             <h3>MEPFA (Vertisystem)</h3>
             <p class="muted">Cypress automation + manual validation; Swagger‑driven API checks.</p>
             <div class="badges"><span class="badge">Cypress</span><span class="badge">Swagger</span></div>
-            <div style="margin-top:10px">
-              <button class="btn" data-modal="mepfa">View details</button>
-            </div>
           </div>
-          <div class="card reveal proj" data-tags="ui api perf">
+          <div class="card">
             <h3>DocTech HMS (Octoban)</h3>
             <p class="muted">Selenium+Java; CI with Jenkins; TestRail reporting; -30% API time.</p>
             <div class="badges"><span class="badge">Selenium</span><span class="badge">REST Assured</span><span
                 class="badge">Jenkins</span></div>
-            <div style="margin-top:10px">
-              <button class="btn" data-modal="doctech">View details</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modals -->
-      <div id="modal" class="modal" aria-hidden="true">
-        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-          <h3 id="modalTitle">Case study</h3>
-          <div id="modalBody" class="muted"></div>
-          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-            <button class="btn" id="modalClose">Close</button>
-            <a class="btn primary" href="mailto:ujjawal95pratap@gmail.com?subject=Case%20study%20discussion">Discuss
-              this project</a>
           </div>
         </div>
       </div>
     </section>
-
     <section id="contact">
       <div class="container">
         <h2>Contact</h2>
-        <div class="card reveal">
-          <form id="contactForm" action="https://formspree.io/f/xdkdqzoa" method="POST">
-            <div class="row">
-              <div><label>Name<br><input name="name" required></label></div>
-              <div><label>Email<br><input type="email" name="email" required></label></div>
+        <div class="card">
+          <form action="https://formspree.io/f/xdkdqzoa" method="POST">
+            <div style="display:grid;gap:12px;grid-template-columns:1fr 1fr">
+              <div><label>Name<br><input name="name" required
+                    style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--fg)"></label>
+              </div>
+              <div><label>Email<br><input type="email" name="email" required
+                    style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--fg)"></label>
+              </div>
             </div>
-            <div style="margin-top:12px"><label>Message<br><textarea name="message"
-                  placeholder="Tell me about your project or role..." required></textarea></label></div>
-            <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
-              <button class="btn primary" type="submit">Send message</button>
-              <span class="note">Powered by Formspree - You’ll get a confirmation email.</span>
-            </div>
+            <div style="margin-top:12px"><label>Message<br>
+                <textarea name="message" required
+                  style="width:100%;min-height:120px;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--fg)"></textarea>
+              </label></div>
+            <div style="margin-top:12px"><button class="btn primary" type="submit">Send message</button></div>
           </form>
-          <div style="margin-top:12px">
-            <p>Email: <a href="mailto:ujjawal95pratap@gmail.com">ujjawal95pratap@gmail.com</a> - LinkedIn: <a
-                target="_blank" href="https://www.linkedin.com/in/ujjawal-singh-baghel/">Profile</a> - GitHub: <a
-                target="_blank" href="https://github.com/Ujjawal9166">Ujjawal9166</a></p>
-          </div>
         </div>
       </div>
     </section>
-  </main>
-  <footer style="text-align:center;color:var(--muted);padding:26px 0;border-top:1px solid var(--border)"> © 2025 Ujjawal
-    Singh - Built with HTML/CSS & JS - Deployed on GitHub Pages </footer> <a id="topBtn" class="top" href="#">↑ Top</a>
-  <script> // Theme toggle const themeBtn=document.getElementById('themeBtn');const saved=localStorage.getItem('theme');if(saved==='light'){document.body.classList.add('light')} themeBtn.onclick=()=>{document.body.classList.toggle('light');localStorage.setItem('theme',document.body.classList.contains('light')?'light':'dark')}; // Reveal on scroll const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12}); document.querySelectorAll('.reveal').forEach(el=>obs.observe(el)); // Back to top const topBtn=document.getElementById('topBtn');window.addEventListener('scroll',()=>{topBtn.style.display=window.scrollY>600?'inline-block':'none'}); // Project filters const filters=document.querySelectorAll('.filter');const cards=[...document.querySelectorAll('.proj')]; filters.forEach(f=>f.addEventListener('click',()=>{filters.forEach(x=>x.classList.remove('active'));f.classList.add('active'); const k=f.dataset.filter;cards.forEach(c=>{if(k==='all'||c.dataset.tags.includes(k)){c.style.display='block'}else{c.style.display='none'}})})); // Modal content const modal=document.getElementById('modal');const title=document.getElementById('modalTitle');const body=document.getElementById('modalBody'); const content={ alumni:`<b>Problem:</b> No automation, long release cycles.<br><b>Approach:</b> Cucumber‑Selenium UI + REST API suites, data seeding, JMeter perf smoke in CI gates.<br><b>Results:</b> Pipeline -35%, flake <3%, safe releases with smoke+SLO checks.<br><b>Stack:</b> Java, Selenium, Cucumber, Postman, JMeter, Jenkins.`, mepfa:`<b>Problem:</b> Coverage gaps across tuition flows.<br><b>Approach:</b> Cypress spec library + Swagger‑driven API checks; DB validations with DBeaver.<br><b>Results:</b> +30% automation coverage, faster triage.<br><b>Stack:</b> Cypress, JS, Swagger, SQL.`, doctech:`<b>Problem:</b> Manual‑heavy HMS regressions.<br><b>Approach:</b> Selenium+Java framework, REST Assured API tests, Jenkins CI, TestRail reporting.<br><b>Results:</b> -30% API test time, +5% regression coverage per cycle.<br><b>Stack:</b> Java, Selenium, REST Assured, Jenkins, TestRail.` }; document.querySelectorAll('[data-modal]').forEach(b=>b.addEventListener('click',()=>{ const card = b.closest('.card'); title.textContent=`Case study — ${card.querySelector('h3').textContent}`; body.innerHTML=content[b.dataset.modal]||'Details'; modal.style.display='flex'; modal.setAttribute('aria-hidden','false'); })); document.getElementById('modalClose').onclick=()=>{modal.style.display='none';modal.setAttribute('aria-hidden','true')}; modal.addEventListener('click',(e)=>{if(e.target===modal){modal.style.display='none';modal.setAttribute('aria-hidden','true')}}); // Contact form toast const form=document.getElementById('contactForm'); form.addEventListener('submit',function(){setTimeout(()=>alert('Thanks! Your message was sent.'),400);}); </script>
-</body>
-
-</html>
+    </main> <footer>© 2025 Ujjawal Singh - Built with HTML/CSS - Deployed on GitHub Pages</footer> </body> </html>
