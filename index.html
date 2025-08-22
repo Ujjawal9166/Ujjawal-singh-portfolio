@@ -12,6 +12,86 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:wght@600&display=swap"
     rel="stylesheet">
   <style>
+    .ripple {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .ripple::after {
+      content: "";
+      position: absolute;
+      top: var(--ripple-y, 50%);
+      left: var(--ripple-x, 50%);
+      width: 24px;
+      height: 24px;
+      translate: -50% -50%;
+      border-radius: 999px;
+      background: radial-gradient(closest-side,
+          rgba(255, 255, 255, .35),
+          rgba(255, 255, 255, .15) 60%,
+          rgba(255, 255, 255, 0));
+      box-shadow:
+        0 0 0 .5px rgba(255, 255, 255, .4) inset,
+        0 6px 16px rgba(0, 0, 0, .20);
+      pointer-events: none;
+      opacity: 0;
+      scale: .2;
+      transition:
+        opacity .35s ease,
+        scale .65s cubic-bezier(.22, 1, .36, 1);
+      will-change: transform, opacity;
+    }
+
+    .ripple.is-animating::after {
+      opacity: 1;
+      scale: var(--ripple-scale, 12);
+    }
+
+    /* Softer variant for links (optional) */
+    .ripple.soft::after {
+      background: radial-gradient(closest-side,
+          rgba(255, 255, 255, .28),
+          rgba(255, 255, 255, .12) 60%,
+          rgba(255, 255, 255, 0));
+    }
+
+    /* Dark variant for light mode (optional) */
+    .ripple.dark::after {
+      background: radial-gradient(closest-side,
+          rgba(0, 0, 0, .25),
+          rgba(0, 0, 0, .10) 60%,
+          rgba(0, 0, 0, 0));
+    }
+
+    /* Subtle gel lift on hover (optional) */
+    .gel {
+      transition: transform .25s cubic-bezier(.22, 1, .36, 1), box-shadow .25s;
+    }
+
+    .gel:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+    }
+
+    /* Reduced motion: disable animated scale for folks who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+      .ripple::after {
+        transition: opacity .2s linear;
+      }
+
+      .ripple.is-animating::after {
+        scale: 1;
+      }
+
+      .gel,
+      .gel:hover {
+        transition: none;
+        transform: none;
+        box-shadow: none;
+      }
+    }
+
     :root {
       --bg: #0b1220;
       --fg: #eaf1ff;
@@ -107,6 +187,7 @@
     .hero {
       background: radial-gradient(1200px 500px at 10% -10%, #1e3a8a55, transparent), radial-gradient(900px 400px at 90% -20%, #0ea5e955, transparent);
       padding: 72px 0 32px;
+
     }
 
     .hero-grid {
@@ -122,7 +203,27 @@
       border-radius: 50%;
       border: 2px solid var(--border);
       background: #111 center/cover no-repeat url('avatar.jpg');
-      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+      position: relative;
+      border: 2px solid var(--border);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, .28);
+    }
+
+    @media (max-width: 620px) {
+      .avatar {
+        width: 136px;
+        height: 136px;
+      }
+    }
+
+    .avatar::after {
+      content: "";
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      background: conic-gradient(from 180deg, var(--accent), var(--accent2), var(--accent));
+      z-index: -1;
+      filter: blur(12px);
+      opacity: .5;
     }
 
     h1 {
@@ -255,10 +356,19 @@
         <h1>QA Automation Engineer</h1>
         <p class="muted">Selenium - Cypress - REST Assured - JMeter - Jenkins - CI/CD - API‑first testing - Risk‑based
           quality - Performance & Observability</p>
-        <div style="margin:14px 0 6px;display:flex;gap:10px;flex-wrap:wrap"> <a class="btn primary"
-            href="mailto:ujjawal95pratap@gmail.com">Contact</a> <a class="btn"
-            href="https://www.linkedin.com/in/ujjawal-singh-baghel/" target="_blank" rel="noopener">LinkedIn</a> <a
-            class="btn" href="https://github.com/Ujjawal9166" target="_blank" rel="noopener">GitHub</a> </div>
+        <div style="margin:14px 0 6px;display:flex;gap:10px;flex-wrap:wrap"> <!-- Email in browser (Gmail) --> <a
+            class="btn primary ripple gel"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=ujjawal95pratap@gmail.com&su=From%20Portfolio&body=Hi%20Ujjawal%2C"
+            target="_blank" rel="noopener" aria-label="Email Ujjawal via Gmail">Email</a>
+          <!-- Phone call (opens dialer on mobile; on desktop it uses any set VoIP app) -->
+          <a class="btn ripple gel" href="tel:+9166467964" aria-label="Call Ujjawal">Call</a>
+
+          <!-- Keep your existing links -->
+          <a class="btn ripple gel" href="https://www.linkedin.com/in/ujjawal-singh-baghel/" target="_blank"
+            rel="noopener">LinkedIn</a>
+          <a class="btn ripple gel" href="https://github.com/Ujjawal9166" target="_blank" rel="noopener">GitHub</a>
+
+        </div>
         <div class="chips"><span class="chip">6+ yrs</span><span class="chip">Automation from scratch</span><span
             class="chip">CI/CD pipelines</span></div>
       </div>
@@ -395,4 +505,25 @@
         </div>
       </div>
     </section>
-    </main> <footer>© 2025 Ujjawal Singh - Built with HTML/CSS - Deployed on GitHub Pages</footer> </body> </html>
+  </main>
+  <script> (function () {
+      function attach(el) {
+        el.addEventListener('pointerenter', (e) => {
+          const rect = el.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top; el.style.setProperty('--ripple-x', x + 'px'); el.style.setProperty('--ripple-y', y + 'px');
+          const maxDist = Math.hypot(Math.max(x, rect.width - x), Math.max(y, rect.height - y));
+          const scale = (maxDist / 12) + 0.8;
+          //24px base diameter -> radius 12 el.style.setProperty('--ripple-scale', scale);
+          el.classList.add('is-animating');
+        }, { passive: true });
+        el.addEventListener('pointerleave', () => {
+          el.classList.remove('is-animating');
+
+        }, { passive: true });
+      } document.querySelectorAll('.ripple').forEach(attach);
+    })(); </script>
+  <footer>© 2025 Ujjawal Singh - Built with HTML/CSS - Deployed on GitHub Pages</footer>
+</body>
+
+</html>
